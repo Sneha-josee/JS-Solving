@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Problem Solving</title>
+    <link rel="stylesheet" href="atm.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>JavaScript Problem Solving</h1>
+        <div class="Withdraw">
+            <h2>ATM Withdrawal</h2>
+            <input type="number" id="balance" placeholder="Enter Balance"><br><br>
+            <input type="number" id="amount" placeholder="Enter Amount"><br><br>
+            <input type="password" id="pin" placeholder="Enter PIN"><br><br>
+            <input type="password" id="enteredPin" placeholder="Re-enter PIN"><br><br>
+            <button
+                onclick="alert(atmWithdrawal(parseFloat(balance.value), parseFloat(amount.value), parseInt(pin.value), parseInt(enteredPin.value)))">Withdraw</button>
+        </div>
+
+        <div class="Shopping">
+            <h2>Shopping Discount</h2>
+            <input type="number" id="orderAmount" placeholder="Enter Order Amount"><br><br>
+            <button onclick="alert(calculateFinalAmount(parseFloat(orderAmount.value)))">Calculate</button>
+        </div>
+
+        <div class="Grading">
+            <h2>Student Grading</h2>
+            <input type="number" id="marks" placeholder="Enter Marks"><br><br>
+            <input type="number" id="attendance" placeholder="Enter Attendance %"><br><br>
+            <button onclick="alert(calculateGrade(parseFloat(marks.value), parseFloat(attendance.value)))">Get
+                Grade</button>
+        </div>
+
+        <div class="Traffic">
+            <h2>Traffic Light</h2>
+            <select id="trafficDensity">
+                <option value="Heavy Traffic">Heavy Traffic</option>
+                <option value="Moderate Traffic">Moderate Traffic</option>
+                <option value="Light Traffic">Light Traffic</option>
+            </select><br><br>
+            <button onclick="alert(trafficLightControl(trafficDensity.value))">Check Signal Time</button>
+        </div>
+
+        <div class="Movie">
+            <h2>Movie Ticket Price</h2>
+            <input type="number" id="age" placeholder="Enter Age"><br><br>
+            <input type="number" id="showTime" placeholder="Enter Show Time (24h format)"><br><br>
+            <button onclick="alert(calculateTicketPrice(parseInt(age.value), parseInt(showTime.value)))">Calculate Ticket
+                Price</button>
+        </div>
+
+        <div class="Eligibility">
+            <h2>Job Eligibility</h2>
+            <input type="number" id="jobAge" placeholder="Enter Age"><br><br>
+            <input type="number" id="experience" placeholder="Enter Experience (Years)"><br><br>
+            <input type="text" id="qualification" placeholder="Enter Qualification"><br><br>
+            <button onclick="alert(isEligibleForJob(parseInt(jobAge.value), parseInt(experience.value), qualification.value))">Check
+                Eligibility</button>
+        </div>
+
+       <div class="Coupon">
+        <h2>Coupon Redemption</h2>
+        <input type="number" id="couponOrderAmount" placeholder="Enter Order Amount"><br><br>
+        <input type="text" id="couponCode" placeholder="Enter Coupon Code"><br><br>
+        <button onclick="alert(applyCoupon(parseFloat(couponOrderAmount.value), couponCode.value))">Apply
+            Coupon</button>
+       </div>
+
+        <div class="Membership">
+            <h2>Membership Plan</h2>
+            <select id="planType">
+                <option value="Basic">Basic</option>
+                <option value="Premium">Premium</option>
+                <option value="VIP">VIP</option>
+            </select><br><br>
+            <input type="checkbox" id="checkbox"> Personal Trainer<br><br>
+            <input type="checkbox" id="checkbox"> Diet Plan<br><br>
+            <button onclick="alert(choosePlan(planType.value, wantsTrainer.checked, wantsDietPlan.checked))">Choose
+                Plan</button>
+        </div>
+
+        <div class="Electricity">
+            <h2>Electricity Bill</h2>
+            <input type="number" id="units" placeholder="Enter Units Consumed"><br><br>
+            <input type="number" id="timeOfDay" placeholder="Enter Time (24h format)"><br><br>
+            <button onclick="alert(calculateElectricityBill(parseInt(units.value), parseInt(timeOfDay.value)))">Calculate
+                Bill</button>
+        </div>
+
+        <div class="Flight">
+            <h2>Flight Ticket</h2>
+            <select id="classType">
+                <option value="Economy">Economy</option>
+                <option value="Business">Business</option>
+                <option value="First">First</option>
+            </select><br><br>
+            <input type="number" id="" placeholder="Enter Luggage Weight (kg)"><br><br>
+            <input type="checkbox" id="checkbox"> Student<br><br>
+            <input type="checkbox" id="checkbox"> Senior Citizen<br><br>
+            <button
+                onclick="alert(calculateFlightFare(classType.value, parseFloat(luggageWeight.value), isStudent.checked, isSenior.checked))">Calculate
+                Fare</button>
+        </div>
+    </div>
+    <script src="atm.js"></script>
+</body>
+
+</html>
